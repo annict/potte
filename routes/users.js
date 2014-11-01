@@ -1,18 +1,21 @@
+var path = require('path');
+
 var express = require('express');
 var router = express.Router();
 var Nightmare = require('nightmare');
 
 router.get('/:username', function(req, res) {
   var nightmare = new Nightmare();
-  console.log('username: ' + req.params.username);
-  console.log('url: ' + process.env.ANNICT_URL);
+  var url = process.env.ANNICT_URL + '/shot/' + req.params.username;
+  var filePath = path.join(__dirname, '..', 'tmp', 'shots', req.params.username + '.png');
 
   nightmare
-    .goto(process.env.ANNICT_URL)
-    .screenshot('/root/shot.png')
-    .run(function(err, nightmare){
-      res.sendFile('/root/shot.png');
-      console.log('Done.');
+    .viewport(1000, 2000)
+    .goto(url)
+    .screenshot(filePath)
+    .run(function(err, nightmare) {
+      res.sendFile(filePath);
+      console.log('Done. ' + filePath);
     });
 });
 
