@@ -10,7 +10,7 @@ router.get('/:username', function(req, res) {
   var filePath = path.join(__dirname, '..', 'tmp', 'shots', req.params.username + '.png');
 
   nightmare
-    .viewport(1000, 2000)
+    .viewport(1000, 1)
     .goto(url)
     .screenshot(filePath)
     .run(function(err, nightmare) {
