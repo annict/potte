@@ -4,8 +4,6 @@
 
 ```
 $ cd potte
-$ npm install
-$ foreman s -f Procfile.dev -e .env.dev
+$ bundle
+$ rails s
 ```
-
-[http://localhost:5000](http://localhost:5000) にアクセスすると「ぽって」がレスポンスを返してくれるはずです。
