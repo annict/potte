@@ -8,8 +8,6 @@ gem 'action_args'
 gem 'dragonfly', '1.0.7'
 gem 'dragonfly-s3_data_store'
 gem 'jbuilder'
-gem 'newrelic_rpm'
-gem 'paper_trail'
 gem 'pg'
 gem 'poltergeist'
 gem 'rack-cors', require: 'rack/cors'
@@ -38,5 +36,7 @@ end
 
 group :production do
   gem 'bugsnag'
+  gem 'newrelic_rpm'
+  gem 'paper_trail'
   gem 'rails_12factor'
 end
