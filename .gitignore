@@ -1,5 +1,4 @@
 .DS_Store
 
 /config/application.yml
-/config/secrets.yml
 /tmp
