@@ -4,7 +4,7 @@ require 'dragonfly/s3_data_store'
 Dragonfly.app.configure do
   plugin :imagemagick
 
-  url_format '/media/:job/:name'
+  url_format '/media/:job/:sha/:name'
   url_host   ENV['DRAGONFLY_URL']
 
   secret ENV['DRAGONFLY_SECRET']
