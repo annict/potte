@@ -6,13 +6,13 @@ gem 'rails', '4.1.7'
 
 gem 'action_args'
 gem 'bugsnag'
+gem 'capybara'
 gem 'dragonfly', '1.0.7'
 gem 'dragonfly-s3_data_store'
 gem 'jbuilder'
 gem 'pg'
 gem 'poltergeist'
 gem 'rack-cors', require: 'rack/cors'
-gem 'screencap'
 gem 'unicorn'
 
 group :development, :test do
