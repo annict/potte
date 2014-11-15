@@ -5,6 +5,7 @@ ruby '2.1.5'
 gem 'rails', '4.1.7'
 
 gem 'action_args'
+gem 'bugsnag'
 gem 'dragonfly', '1.0.7'
 gem 'dragonfly-s3_data_store'
 gem 'jbuilder'
@@ -35,7 +36,6 @@ group :development do
 end
 
 group :production do
-  gem 'bugsnag'
   gem 'newrelic_rpm'
   gem 'paper_trail'
   gem 'rails_12factor'
