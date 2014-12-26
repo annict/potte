@@ -9,6 +9,10 @@ module Potte
       @user = user
 
       Capybara.run_server = false
+      Capybara.register_driver :poltergeist do |app|
+        # JavaScriptのエラーは無視する
+        Capybara::Poltergeist::Driver.new(app, js_errors: false)
+      end
       Capybara.default_driver = :poltergeist
     end
 
