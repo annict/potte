@@ -12,8 +12,8 @@ gem 'dragonfly-s3_data_store'
 gem 'jbuilder'
 gem 'pg'
 gem 'poltergeist'
+gem 'puma'
 gem 'rack-cors', require: 'rack/cors'
-gem 'unicorn'
 
 group :development, :test do
   gem 'awesome_print'
